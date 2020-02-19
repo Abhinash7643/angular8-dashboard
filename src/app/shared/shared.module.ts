@@ -12,6 +12,7 @@ import {MatListModule} from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AreaComponent } from './widgets/area/area.component';
 
 
 
@@ -19,7 +20,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   declarations: [
     SidebarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    AreaComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   exports:[
     SidebarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    AreaComponent
   ]
 })
 export class SharedModule { }
