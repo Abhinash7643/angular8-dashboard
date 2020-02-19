@@ -13,6 +13,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {}
   toggleSideBar() {
     this.toggleSideBarForMe.emit();
+
+    // to make responsive remove and see the effect
+    setTimeout(() => {
+      window.dispatchEvent(
+        new Event('resize')
+      );
+    }, 300);
   }
 
 }

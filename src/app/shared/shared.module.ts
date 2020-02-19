@@ -13,6 +13,8 @@ import { RouterModule } from '@angular/router';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AreaComponent } from './widgets/area/area.component';
+import { CardComponent } from './widgets/card/card.component';
+import { PieComponent } from './widgets/pie/pie.component';
 
 
 
@@ -21,7 +23,9 @@ import { AreaComponent } from './widgets/area/area.component';
     SidebarComponent,
     FooterComponent,
     HeaderComponent,
-    AreaComponent
+    AreaComponent,
+    CardComponent,
+    PieComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +43,9 @@ import { AreaComponent } from './widgets/area/area.component';
     SidebarComponent,
     FooterComponent,
     HeaderComponent,
-    AreaComponent
+    AreaComponent,
+    CardComponent,
+    PieComponent
   ]
 })
 export class SharedModule { }
