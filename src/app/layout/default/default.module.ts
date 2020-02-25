@@ -11,12 +11,17 @@ import {MatCardModule} from '@angular/material/card';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ArticlesComponent } from 'src/app/modules/articles/articles.component';
+import { DashboardService } from 'src/app/modules/dashboard.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     DefaultComponent,
     DashboardComponent,
-    PostsComponent
+    PostsComponent,
+    ArticlesComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +32,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FlexLayoutModule,
     MatCardModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
+  ],
+  providers:[
+    DashboardService
   ]
 })
 export class DefaultModule { }
