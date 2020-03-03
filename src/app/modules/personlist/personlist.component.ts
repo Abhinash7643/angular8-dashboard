@@ -14,7 +14,7 @@ export class PersonlistComponent implements OnInit {
 
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   data: IPerson[];
   public errorMsg;
