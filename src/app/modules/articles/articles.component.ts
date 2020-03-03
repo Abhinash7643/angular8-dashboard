@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DashboardService } from '../dashboard.service';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-articles',
@@ -8,14 +7,10 @@ import { DashboardService } from '../dashboard.service';
 })
 export class ArticlesComponent implements OnInit {
 
-  public person = [];
-  public errorMsg;
-  constructor( private dashboardService : DashboardService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.dashboardService.getEmployees().subscribe(data =>
-      this.person = data,
-      error => this.errorMsg = error)
+
   }
 
 }

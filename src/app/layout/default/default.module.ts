@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DefaultComponent } from './default.component';
+import {BrowserModule} from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
 import { PostsComponent } from 'src/app/modules/posts/posts.component';
@@ -14,6 +15,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ArticlesComponent } from 'src/app/modules/articles/articles.component';
 import { DashboardService } from 'src/app/modules/dashboard.service';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSortModule} from '@angular/material/sort';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ArticleService } from 'src/app/modules/articles/article.service';
+import { PersonlistComponent } from 'src/app/modules/personlist/personlist.component';
+import { PersonService } from 'src/app/modules/personlist/person.service';
 
 
 @NgModule({
@@ -21,10 +28,12 @@ import { HttpClientModule } from '@angular/common/http';
     DefaultComponent,
     DashboardComponent,
     PostsComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    PersonlistComponent
   ],
   imports: [
     CommonModule,
+    BrowserModule,
     RouterModule,
     SharedModule,
     MatSidenavModule,
@@ -33,10 +42,15 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatPaginatorModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSortModule,
+    FormsModule,
+    MatFormFieldModule
   ],
   providers:[
-    DashboardService
+    DashboardService,
+    ArticleService,
+    PersonService
   ]
 })
 export class DefaultModule { }

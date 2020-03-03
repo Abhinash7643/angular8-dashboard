@@ -12,10 +12,8 @@ export class DashboardService {
 
   constructor(private http:HttpClient) {}
 
-
-
   private _url: string = "http://localhost:8085/person/getAllPerson";
-  getEmployees(): Observable<IPerson[]>{
+  getPerson(): Observable<IPerson[]>{
     return this.http.get<IPerson[]>(this._url).
     pipe(tap(data =>
       console.log('detailsService', data)), catchError(this.errorHandler));
