@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IPerson } from '../IPerson';
+import { IPerson } from '../../shared/models/IPerson';
 import { DashboardService } from '../dashboard.service';
 
 @Injectable({

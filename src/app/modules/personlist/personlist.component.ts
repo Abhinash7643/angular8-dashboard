@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
-import { IPerson } from '../IPerson';
+import { IPerson } from '../../shared/models/IPerson';
 import {MatTableDataSource} from '@angular/material/table';
 import { PersonService } from './person.service';
 
@@ -34,5 +34,19 @@ export class PersonlistComponent implements OnInit {
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
+
+
+
+  // ngOnInit() {
+  //   this.employee = new Employee();
+
+  //   this.id = this.route.snapshot.params['id'];
+
+  //   this.employeeService.getEmployee(this.id)
+  //     .subscribe(data => {
+  //       console.log(data)
+  //       this.employee = data;
+  //     }, error => console.log(error));
+  // }
 
 }

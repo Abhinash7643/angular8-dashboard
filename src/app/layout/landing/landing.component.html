@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>Products List</h1>
+  <ng-container *ngIf="isLoading">
+    <app-card-loader>
+       Loading products list ... Please wait.
+      </app-card-loader>
+  </ng-container>
+  <ng-container *ngIf="isError">
+    <app-network-error></app-network-error>
+  </ng-container>
+  <div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+    <mat-card  *ngFor="let bestProduct of bestProducts" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+      <app-best-product [bestProduct] = "bestProduct"></app-best-product>
+    </mat-card>
+  </div>
+
+</div>
+        <!-- <app-items-list-item [item]="item"  (onAddToCartClick)="handleAddToCardClick($event)"></app-items-list-item> -->
+
+
+
+
+<!-- <div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+    <mat-card  *ngFor="let bestProduct of bestProducts" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+      <mat-card-title>Card 1</mat-card-title>
+      <img mat-card-image src="https://kakiseni.org/wp-content/uploads/2018/03/250X250.png" class="image">
+      <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
+      <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions>
+    </mat-card>
+</div> -->
+
+
+
+
+
+<!-- Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
+
+

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DefaultComponent } from './default.component';
+import { DefaultComponent } from './default/default.component';
 import {BrowserModule} from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
@@ -21,6 +21,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ArticleService } from 'src/app/modules/articles/article.service';
 import { PersonlistComponent } from 'src/app/modules/personlist/personlist.component';
 import { PersonService } from 'src/app/modules/personlist/person.service';
+import { LandingComponent } from './landing/landing.component';
+import { ProductModule } from '../product/product.module';
 
 
 @NgModule({
@@ -28,11 +30,13 @@ import { PersonService } from 'src/app/modules/personlist/person.service';
     DefaultComponent,
     DashboardComponent,
     PostsComponent,
+    LandingComponent,
     ArticlesComponent,
     PersonlistComponent
   ],
   imports: [
     CommonModule,
+    SharedModule,
     BrowserModule,
     RouterModule,
     SharedModule,
@@ -45,7 +49,8 @@ import { PersonService } from 'src/app/modules/personlist/person.service';
     HttpClientModule,
     MatSortModule,
     FormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ProductModule
   ],
   providers:[
     DashboardService,

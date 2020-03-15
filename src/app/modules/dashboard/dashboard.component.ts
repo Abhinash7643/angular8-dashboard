@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator'
 import {MatSort} from '@angular/material/sort'
-import { IPerson } from '../IPerson';
+import { IPerson } from '../../shared/models/IPerson';
 import { DashboardService } from '../dashboard.service';
 
 @Component({

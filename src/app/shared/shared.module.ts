@@ -15,6 +15,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AreaComponent } from './widgets/area/area.component';
 import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
+import { CardLoaderComponent } from './components/card-loader/card-loader.component';
+import { NgxContentLoadingModule } from "ngx-content-loading";
+import { MatCardModule } from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { LoadingPlaceholderComponent } from './components/loading-placeholder/loading-placeholder.component';
+import { NetworkErrorComponent } from './components/network-error/network-error.component';
 
 
 
@@ -25,7 +31,10 @@ import { PieComponent } from './widgets/pie/pie.component';
     HeaderComponent,
     AreaComponent,
     CardComponent,
-    PieComponent
+    PieComponent,
+    CardLoaderComponent,
+    LoadingPlaceholderComponent,
+    NetworkErrorComponent
   ],
   imports: [
     CommonModule,
@@ -35,9 +44,13 @@ import { PieComponent } from './widgets/pie/pie.component';
     MatButtonModule,
     MatMenuModule,
     MatListModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
     RouterModule,
     HighchartsChartModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxContentLoadingModule
+
   ],
   exports:[
     SidebarComponent,
@@ -45,7 +58,9 @@ import { PieComponent } from './widgets/pie/pie.component';
     HeaderComponent,
     AreaComponent,
     CardComponent,
-    PieComponent
+    PieComponent,
+    CardLoaderComponent,
+    NetworkErrorComponent
   ]
 })
 export class SharedModule { }
