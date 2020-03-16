@@ -3,7 +3,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator'
 import {MatSort} from '@angular/material/sort'
 import { IPerson } from '../../shared/models/IPerson';
-import { DashboardService } from '../dashboard.service';
+import { DashboardService } from '../../shared/service/dashboard.service';
 
 @Component({
   selector: 'app-dashboard',

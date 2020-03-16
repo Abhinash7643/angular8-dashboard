@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { IPerson } from '../shared/models/IPerson';
+import { IPerson } from '../models/IPerson';
 import {throwError as observableThrowError,  Observable } from 'rxjs';
 // import { tap, catchError } from 'rxjs/operators';
 import {tap, catchError} from 'rxjs/operators'

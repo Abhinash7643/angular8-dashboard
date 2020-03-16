@@ -6,6 +6,7 @@ import { ProductService } from '../shared/service/product.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { ProductRoutingModule } from './product-routing.module';
 
 
 
@@ -13,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [BestProductComponent],
   imports: [
     CommonModule,
+    ProductRoutingModule,
     RouterModule,
     FlexLayoutModule,
     MatCardModule,

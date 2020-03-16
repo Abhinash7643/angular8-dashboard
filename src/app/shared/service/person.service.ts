@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { IPerson } from '../../shared/models/IPerson';
-import { DashboardService } from '../dashboard.service';
+import { IPerson } from '../models/IPerson';
+import { DashboardService } from './dashboard.service';
 
 @Injectable({
   providedIn: 'root'
